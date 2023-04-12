@@ -1,0 +1,33 @@
+#questionnaire-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 32px;
+}
+
+#right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 32px;
+}
+
+.progress {
+    background-color: #d8d8d8;
+    height: 10px;
+    width: 300px;
+}
+
+.progress-done {
+    background-color: blue;
+    height: 100%;
+    width: 100px;
+}
