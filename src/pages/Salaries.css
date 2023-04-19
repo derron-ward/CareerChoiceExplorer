@@ -1,0 +1,57 @@
+#salaries-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+#salaries-page h1 {
+    margin: 0;
+}
+
+#salaries-main-card {
+    width: 50%;
+    min-width: 600px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px;
+    margin: 16px 0;
+    border-radius: 13px;
+    background-color: var(--card);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+#salaries-main-card h3 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+#earners {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+#earners h4 {
+    text-align: center;
+}
+
+#salaries-btns {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#salaries-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
