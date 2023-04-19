@@ -12,6 +12,10 @@
     padding: 32px;
 }
 
+#description {
+    align-self: flex-start;
+}
+
 #right-section {
     display: flex;
     flex-direction: column;
@@ -20,14 +24,10 @@
     padding: 32px;
 }
 
-.progress {
-    background-color: #d8d8d8;
-    height: 10px;
-    width: 300px;
-}
-
-.progress-done {
-    background-color: blue;
-    height: 100%;
-    width: 100px;
+#qna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 32px;
 }
