@@ -7,14 +7,14 @@
     justify-content: space-between;
     padding: 8px;
     margin: 8px;
-    border-radius: 13px;
-    background-color: var(--card);
+    border-radius: 8px;
+    background-color: var(--background-overlay);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
     transition: all 0.2s ease;
 }
 
 #salary-card:hover {
-    background-color: var(--card-hover);
+    background-color: var(--background-overlay-hover);
     box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
 }
 
