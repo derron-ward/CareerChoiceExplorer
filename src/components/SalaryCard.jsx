@@ -1,23 +1,12 @@
 import React from 'react'
 import './SalaryCard.css'
 
-function SalaryCard({ company, locations, salary, medianSalary }) {
-    if (Array.isArray(locations)) {
-        if (locations.length > 2) {
-            const extras = locations.length - 2
-            console.log(`Extras: ${extras}`)
-            locations.splice(2)
-            locations = locations.join(', ') + `, +${extras}`
-            console.log(locations)
-        }
-        else locations = locations.join(', ')
-    }
+function SalaryCard({ company, jobTitle, salary, medianSalary }) {
     
-
     return (
       <div id='salary-card'>
-          <h4>{company}<br /><span>{locations}</span></h4>
-          <h4 className={salary < medianSalary ? 'danger' : 'success'}>${salary}</h4>
+          <h4>{company}<br /><span>{jobTitle}</span></h4>
+          <h4 className={salary < medianSalary ? 'danger' : 'success'}>${typeof salary == 'number' ? salary.toLocaleString() : salary}</h4>
       </div>
     )
 }
