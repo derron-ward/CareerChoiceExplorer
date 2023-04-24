@@ -3,29 +3,21 @@ import './Profile.css'
 
 function Profile() {
   return (
-    <div>
-      <div className="ChangePassword">
-        <form onSubmit={handleChangeClick}>
-          <FormGroup bsSize="large" controlId="oldPassword">
-            <FormLabel>Old Password</FormLabel>
-          </FormGroup>
-          <FormGroup bsSize="large" controlId="password">
-            <FormLabel>New Password</FormLabel>
-          </FormGroup>
-          <FormGroup bsSize="large" controlId="confirmPassword">
-            <FormLabel>Confirm Password</FormLabel>
-          </FormGroup>
-          <LoaderButton
-            block
-            type="submit"
-            bsSize="large"
-            disabled={!validateForm()}
-            isLoading={isChanging}
-          >
-            Change Password
-          </LoaderButton>
-        </form>
-      </div>
+    <div id="profile-page">
+      <form id='change-passwd'>
+        <div className='form-field'>
+          <label for="old-passwd">Old Password</label>
+          <input type="text" />
+        </div>
+        <div className='form-field'>
+          <label for="new-passwd">New Password</label>
+          <input type="text" />
+        </div>
+        <div className='form-field'>
+          <label for="new-passwd-confirm">Confirm New Password</label>
+          <input type="text" />
+        </div>
+      </form>
     </div>
   )
 }
