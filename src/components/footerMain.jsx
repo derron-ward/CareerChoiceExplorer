@@ -1,13 +1,13 @@
 import React from 'react'
-import './footermain.css'
+import './FooterMain.css'
 
-function footerMain() {
+function FooterMain() {
   return (
-    <div class="subscribeBox">
-      <h1 class="subscribe">Subscrive to our newsletter</h1>
+    <div className="subscribeBox">
+      <h1 className="subscribe">Subscrive to our newsletter</h1>
       <h3>For news about upcoming events or any job related news</h3>
     </div>
   )
 }
 
-export default footerMain
+export default FooterMain
