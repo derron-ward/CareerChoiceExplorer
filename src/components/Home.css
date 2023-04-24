@@ -24,7 +24,7 @@
     margin-top: 5%; 
   }
   body {
-    background-color: #83C5BE;
+    background-color: #EDF6F9;
   }
   input[type="text"] {
     background-color: #f1f1f1;
@@ -54,4 +54,11 @@
     width: 80%;
     padding-left: 10%;
     font-size: 18px;
+  }
+
+  .webpage {
+    background-color: #83C5BE;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 750px;
   }

@@ -8,6 +8,7 @@ import jobImage from '../assets/jobSearch.jpg';
 function Home() {
   return (
     <div>
+      <div class = "webpage">
       <div class="header">
       </div>
       <div className="container">
@@ -22,7 +23,7 @@ function Home() {
         <button class="searchButton">Search</button>
         </form>
       </div>
-      
+      </div>
     </div>
     </div>
   );
