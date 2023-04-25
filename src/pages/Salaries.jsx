@@ -1,37 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SalaryCard from '../components/SalaryCard'
 import axios from 'axios'
 import './Salaries.css'
 
-function getMedianComp(careers) {
-    let totalComp = 0
-    careers.foreach(career => {
-        totalComp += career.comp
-    })
-    return totalComp / careers.length
-}
-
-function loadCards(careers) {
+function createCards(careers) {
     const result = []
-    const medianComp = getMedianComp(careers)
-    careers.foreach(career => {
-        result.push(<SalaryCard company={career.Career} jobTitle={career.Injustry} salary={career.SalaryMid} medianSalary={100000} />)
-    })
+    for (let i = 0; i < careers.length; ++i) {
+        result.push(<SalaryCard company={careers[i].Career} jobTitle={careers[i].Injustry} salary={careers[i].SalaryMid} medianSalary={100000} />)
+    }
     return result
 }
 
 function Salaries() {
-    // load the salary information
-    let cards
-    console.log('Loading cards')
-    axios.get('https://cce-api.onrender.com/careers')
-        .then((res) => {
-            cards = loadCards(res)
-            console.log(res)
-        })
-        .catch((err) => {
-            console.error('Error fetching from api')
-        })
+    const [isLoading, setLoading] = useState(true)
+    const [careers, setCareers] = useState()
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/careers')
+            .then(res => {
+                setCareers(res.data)
+                setLoading(false)
+            })
+    }, [])
+
+    if (isLoading) {
+        console.log('loading')
+        return <div></div>
+    }
 
     return (
         <div id='salaries-page'>
@@ -46,7 +41,7 @@ function Salaries() {
                 </div>
             </div>
             <div id='salaries-grid'>
-                
+                {createCards(careers)}
             </div>
         </div>
     )
