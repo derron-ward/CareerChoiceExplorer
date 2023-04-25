@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Questionnaire from './pages/Questionnaire'
 import Salaries from './pages/Salaries'
-import Industries from './pages/Industries'
+import Careers from './pages/Careers'
 import Events from './pages/Events'
 import Profile from './pages/Profile'
 
@@ -19,7 +19,7 @@ function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/questionnaire' element={<Questionnaire />} />
                 <Route path='/salaries' element={<Salaries />} />
-                <Route path='/industries' element={<Industries />} />
+                <Route path='/careers' element={<Careers />} />
                 <Route path='/events' element={<Events />} />
                 <Route path='/profile' element={<Profile />} />
             </Routes>
