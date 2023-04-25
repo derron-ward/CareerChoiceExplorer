@@ -1,0 +1,35 @@
+.event-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--background-overlay);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+    transition: all 0.2s ease;
+}
+
+.event-card:hover {
+    background-color: var(--background-overlay-hover);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
+}
+
+.event-card h1 {
+    font-size: 1rem;
+}
+
+.event-card p {
+    font-size: 0.75rem;
+}
+
+.event-card a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    align-self: flex-end;
+}
+
+.event-card a:hover {
+    color: var(--success);
+}
