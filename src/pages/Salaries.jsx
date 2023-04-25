@@ -1,5 +1,6 @@
 import React from 'react'
 import SalaryCard from '../components/SalaryCard'
+import axios from 'axios'
 import './Salaries.css'
 
 function getMedianComp(careers) {
@@ -14,13 +15,23 @@ function loadCards(careers) {
     const result = []
     const medianComp = getMedianComp(careers)
     careers.foreach(career => {
-        result.push(<SalaryCard company={career.company} jobTitle={career.title} salary={career.comp} medianSalary={medianComp} />)
+        result.push(<SalaryCard company={career.Career} jobTitle={career.Injustry} salary={career.SalaryMid} medianSalary={100000} />)
     })
     return result
 }
 
 function Salaries() {
     // load the salary information
+    let cards
+    console.log('Loading cards')
+    axios.get('https://cce-api.onrender.com/careers')
+        .then((res) => {
+            cards = loadCards(res)
+            console.log(res)
+        })
+        .catch((err) => {
+            console.error('Error fetching from api')
+        })
 
     return (
         <div id='salaries-page'>
