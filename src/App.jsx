@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Navbar from './components/Navbar'
+import FooterMain from './components/footerMain'
 
 import Home from './pages/Home'
 import Questionnaire from './pages/Questionnaire'
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/events' element={<Events />} />
                 <Route path='/profile' element={<Profile />} />
             </Routes>
+            <FooterMain />
         </Router>
     </div>
   )
