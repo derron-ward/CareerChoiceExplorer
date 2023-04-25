@@ -3,22 +3,30 @@ import SalaryCard from '../components/SalaryCard'
 import axios from 'axios'
 import './Salaries.css'
 
-function createCards(careers) {
+function createCards(salaries, medianComp) {
     const result = []
-    for (let i = 0; i < careers.length; ++i) {
-        result.push(<SalaryCard company={careers[i].Career} jobTitle={careers[i].Injustry} salary={careers[i].SalaryMid} medianSalary={100000} />)
+    for (let i = 0; i < salaries.length; ++i) {
+        result.push(<SalaryCard company={salaries[i].company} jobTitle={salaries[i].title} salary={salaries[i].comp} medianSalary={medianComp} />)
     }
     return result
 }
 
 function Salaries() {
     const [isLoading, setLoading] = useState(true)
-    const [careers, setCareers] = useState()
+    const [salaries, setSalaries] = useState()
+    let medianComp, lowComp, highComp
 
     useEffect(() => {
-        axios.get('http://localhost:3000/careers')
+        axios.get('http://localhost:3000/salaries')
             .then(res => {
-                setCareers(res.data)
+                // get the median comp
+                let total = 0
+                for (let i = 0; i < res.data.length; ++i) {
+                    total += res.data[i].comp
+                }
+                medianComp = Math.trunc(total / res.data.length)
+
+                setSalaries(res.data)
                 setLoading(false)
             })
     }, [])
@@ -41,7 +49,7 @@ function Salaries() {
                 </div>
             </div>
             <div id='salaries-grid'>
-                {createCards(careers)}
+                {createCards(salaries)}
             </div>
         </div>
     )
