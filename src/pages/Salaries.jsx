@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SalaryCard from '../components/SalaryCard'
+import axios from 'axios'
 import './Salaries.css'
 
-function getMedianComp(careers) {
-    let totalComp = 0
-    careers.foreach(career => {
-        totalComp += career.comp
-    })
-    return totalComp / careers.length
-}
-
-function loadCards(careers) {
+function createCards(salaries, medianComp) {
     const result = []
-    const medianComp = getMedianComp(careers)
-    careers.foreach(career => {
-        result.push(<SalaryCard company={career.company} jobTitle={career.title} salary={career.comp} medianSalary={medianComp} />)
-    })
+    for (let i = 0; i < salaries.length; ++i) {
+        result.push(<SalaryCard company={salaries[i].company} jobTitle={salaries[i].title} salary={salaries[i].comp} medianSalary={medianComp} />)
+    }
     return result
 }
 
 function Salaries() {
-    // load the salary information
+    const [isLoading, setLoading] = useState(true)
+    const [salaries, setSalaries] = useState()
+    let medianComp, lowComp, highComp
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/salaries')
+            .then(res => {
+                // get the median comp
+                let total = 0
+                for (let i = 0; i < res.data.length; ++i) {
+                    total += res.data[i].comp
+                }
+                medianComp = Math.trunc(total / res.data.length)
+
+                setSalaries(res.data)
+                setLoading(false)
+            })
+    }, [])
+
+    if (isLoading) {
+        console.log('loading')
+        return <div></div>
+    }
 
     return (
         <div id='salaries-page'>
@@ -35,7 +49,7 @@ function Salaries() {
                 </div>
             </div>
             <div id='salaries-grid'>
-                
+                {createCards(salaries)}
             </div>
         </div>
     )
