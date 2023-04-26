@@ -10,7 +10,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: var(--background);
+    background-color: var(--card-background);
     z-index: 999;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
 }
@@ -20,10 +20,10 @@
     font-weight: 900;
     font-size: 1rem;
     color: var(--black);
-    transition: all 0.5s ease;
+    transition: var(--transition);
 }
 #navbar-home:hover {
-    color: var(--primary);
+    color: var(--background);
 }
 
 #links {
@@ -40,10 +40,10 @@
     color: var(--black);
     margin: 0 8px;
     font-size: 1rem;
-    transition: all 0.5s ease;
+    transition: var(--transition);
 }
 .navbar-link:hover {
-    color: var(--primary);
+    color: var(--background);
 }
 
 #profile-img {

@@ -10,10 +10,6 @@
     -moz-box-sizing: border-box;
 }
 
-.page-heading {
-    margin: 0 0 32px 0;
-}
-
 #event-grid {
     width: 100%;
     display: grid;
