@@ -30,7 +30,7 @@ function Careers() {
 
   return (
     <div id='careers-page'>
-        <h1>Careers</h1>
+        <h1 className='page-heading'>Careers</h1>
         <div id='careers-grid'>
             {createCards(careers)}
         </div>

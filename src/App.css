@@ -3,14 +3,17 @@
 :root {
     font-family: 'Lato', sans-serif;
 
-    --background: #f2f2f2;
-    --background-overlay: rgba(0, 0, 0, .04);
-    --background-overlay-hover: rgba(0, 0, 0, .06);
+    --background: #83C5BE;
+    --card-background: #F2F2F2;
+    --card-background-hover: #ECDF81;
+    --card-border-radius: 8px;
     --black: #121212;
     --grey: #EAECF0;
-    --primary: #2776EA;
     --success: #38761D;
     --danger: #E06666;
+    --transition: all 0.2s ease;
+    --card-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #root {
@@ -40,4 +43,14 @@ body {
 }
 .danger {
     color: var(--danger);
+}
+
+.page-heading {
+    width: 100%;
+    padding: 16px 0;
+    margin: 0 0 32px 0;
+    text-align: center;
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow-hover);
 }

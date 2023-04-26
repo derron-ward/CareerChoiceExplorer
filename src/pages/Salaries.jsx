@@ -38,7 +38,7 @@ function Salaries() {
 
     return (
         <div id='salaries-page'>
-            <h1>Salaries</h1>
+            <h1 className='page-heading'>Salaries</h1>
             <div id='salaries-main-card'>
                 <div className='earner'>
                     <h4><span style={{fontSize: '1.5rem'}} className='success'>${'200,000'}</span><br />Top 10% Earners</h4>
