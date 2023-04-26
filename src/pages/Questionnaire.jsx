@@ -1,10 +1,13 @@
 import React from 'react'
 import './Questionnaire.css'
+import QuestionImage from '../assets/QuestionnairePhoto.jpg';
 
 function Questionnaire() {
   return (
-    <div id='questionnaire-page'>
+    
+    <div id='questionnaire-page'> 
       <div id='left-section'>
+<img class="questionImage" src={QuestionImage} alt="My image"></img>
         <h1> About this questionnaire</h1>
         <p id='description'>
             This questionnaire was designed to help us get a better understanding of your personality, work ethic,

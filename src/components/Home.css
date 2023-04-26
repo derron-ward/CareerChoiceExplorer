@@ -19,9 +19,7 @@
   }
 
   .header {
-    text-align: center;
-    color: #E29578;
-    margin-top: 2.5%; 
+   
   }
   body {
     background-color: #EDF6F9;
@@ -61,6 +59,7 @@
     margin-left: 2.5%;
     margin-right: 2.5%;
     height: 750px;
+    margin-top: 2.5%;
   }
   .mainbody {
     font-size: 20px;

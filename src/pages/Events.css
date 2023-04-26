@@ -8,10 +8,15 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    background-color: #83c5BE;
 }
 
 #header {
     text-align: center;
+    background-color: #DBDBDB;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
 }
 
 #salary-card {
@@ -26,13 +31,13 @@
     padding: 8px;
     margin: 8px;
     border-radius: 8px;
-    background-color: var(--background-overlay);
+    background-color: #DBDBDB;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
     transition: all 0.2s ease;
 }
 
 #salary-card:hover {
-    background-color: var(--background-overlay-hover);
+    background-color: #ECDF81;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, .2);
 }
 
