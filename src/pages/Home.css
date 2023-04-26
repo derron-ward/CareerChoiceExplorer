@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left-column {
+    width: 48%;
+    padding: 20px;
+    padding-left: 10%;
+    height: 50%;
+  }
+  
+  .right-column {
+    width: 48%;
+    padding-right: 10%;
+    text-align: center;
+    height: 50%;
+  }
+
+  .header {
+   
+  }
+  body {
+    background-color: #EDF6F9;
+  }
+  input[type="text"] {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding-right: 5%;
+    padding-top: 1%;
+    border-radius: 10px;
+  }
+  .searchButton {
+    background-color: #f1f1f1;
+    color: #333;
+    height: 5px;
+    width: 25%;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 2%;
+    line-height: 0%;
+    font-weight: 300;
+  }
+  .JobSearchImage {
+    max-width: 75%;
+    max-height: 50%;
+  }
+  .JobSearchTitle {
+    width: 80%;
+    padding-left: 10%;
+    font-size: 18px;
+  }
+
+  .webpage {
+    background-color: #83C5BE;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 750px;
+    margin-top: 2.5%;
+  }
+  .mainbody {
+    font-size: 20px;
+  }
+  .MainBodyTitle {
+    font-size: 45px;
+    text-align: center;
+    padding-top: 10%;
+  }
+  .mainBodyParagraph {
+    font-size: 20px;
+  }
