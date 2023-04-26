@@ -9,6 +9,7 @@ import Salaries from './pages/Salaries'
 import Careers from './pages/Careers'
 import Events from './pages/Events'
 import Profile from './pages/Profile'
+import Career from './pages/Career'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/careers' element={<Careers />} />
                 <Route path='/events' element={<Events />} />
                 <Route path='/profile' element={<Profile />} />
+                <Route path='/careers/:careerId' element={<Career />} />
             </Routes>
         </Router>
     </div>

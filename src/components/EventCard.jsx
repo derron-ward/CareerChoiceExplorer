@@ -15,7 +15,7 @@ function EventCard({ title, snippet, url }) {
             <h1>{title}</h1>
             <p>{snippet}</p>
         </div>
-        <a href={url}>read more...</a>
+        <a href={url} target='_blank'>read more...</a>
     </div>
   )
 }
