@@ -10,7 +10,7 @@ function Navbar({ avatar = blankProfile}) {
         <div id='links'>
             <Link className="navbar-link" to="/questionnaire">Questionnaire</Link>
             <Link className="navbar-link" to="/salaries">Salaries</Link>
-            <Link className="navbar-link" to="/industries">Industries</Link>
+            <Link className="navbar-link" to="/careers">Careers</Link>
             <Link className="navbar-link" to="/events">Events</Link>
             <Link to="/profile">
                 <img id='profile-img' src={avatar} alt="Profile" />
