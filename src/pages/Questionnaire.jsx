@@ -1,10 +1,12 @@
 import React from 'react'
 import './Questionnaire.css'
+import QuestionImage from '../assets/QuestionnairePhoto.jpg';
 
 function Questionnaire() {
   return (
-    <div id='questionnaire-page'>
+<div id='questionnaire-page'> 
       <div id='left-section'>
+<img class="questionImage" src={QuestionImage} alt="My image"></img>
         <h1> About this questionnaire</h1>
         <p id='description'>
             This questionnaire was designed to help us get a better understanding of your personality, work ethic,
@@ -18,7 +20,7 @@ function Questionnaire() {
         <span id='line'></span>
       </div>
       <div id='right-section'>
-        <form id='qna' action='http://localhost:5173/industries'>
+        <form id='qna' action='/careers'>
             <p className='questions'>1. I prefer to spend time alone to recharge my energy vs. being around people.</p>
                 <label className='answer-group'>
                     <input className='answers' type='radio' name='question1' value='answerchoice1'    />
