@@ -10,7 +10,7 @@
     -moz-box-sizing: border-box;
 }
 
-#news-and-events-page h1 {
+.page-heading {
     margin: 0 0 32px 0;
 }
 

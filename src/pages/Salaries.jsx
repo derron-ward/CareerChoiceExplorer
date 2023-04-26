@@ -14,7 +14,7 @@ function createCards(salaries, medianComp) {
 function Salaries() {
     const [isLoading, setLoading] = useState(true)
     const [salaries, setSalaries] = useState()
-    let medianComp, lowComp, highComp
+    const [medianComp, setMedianComp] = useState()
 
     useEffect(() => {
         axios.get('http://localhost:3000/salaries')
@@ -24,9 +24,9 @@ function Salaries() {
                 for (let i = 0; i < res.data.length; ++i) {
                     total += res.data[i].comp
                 }
-                medianComp = Math.trunc(total / res.data.length)
 
                 setSalaries(res.data)
+                setMedianComp(Math.trunc(total / res.data.length))
                 setLoading(false)
             })
     }, [])
@@ -43,13 +43,13 @@ function Salaries() {
                 <div className='earner'>
                     <h4><span style={{fontSize: '1.5rem'}} className='success'>${'200,000'}</span><br />Top 10% Earners</h4>
                 </div>
-                <h3><span style={{fontSize: '2rem'}} className='success'>${'100,000'}</span><br />Median Compensation</h3>
+                <h3><span style={{fontSize: '2rem'}} className='success'>${typeof medianComp == 'number' ? medianComp.toLocaleString() : medianComp}</span><br />Median Compensation</h3>
                 <div className='earner'>
                     <h4><span style={{fontSize: '1.5rem'}} className='danger'>${'40,000'}</span><br />Bottom 10% Earners</h4>
                 </div>
             </div>
             <div id='salaries-grid'>
-                {createCards(salaries)}
+                {createCards(salaries, medianComp)}
             </div>
         </div>
     )

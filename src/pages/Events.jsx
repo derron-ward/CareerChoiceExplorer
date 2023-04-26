@@ -3,17 +3,17 @@ import EventCard from '../components/EventCard'
 import axios from 'axios'
 import './Events.css'
 
-function createCards(events) {
+function createCards(news) {
     const result = []
-    for (let i = 0; i < events.size; ++i) {
-        result.push(<EventCard title={events[i].title} snippet={events[i].snippet} url={events[i].url} />)
+    for (let i = 0; i < news.length; ++i) {
+        result.push(<EventCard title={news[i].title} snippet={news[i].snippet} url={news[i].url} />)
     }
     return result
 }
 
 function Events() {
     const [isLoading, setLoading] = useState(true)
-    const [events, setEvents] = useState()
+    const [news, setEvents] = useState()
 
     useEffect(() => {
         axios.get('http://localhost:3000/events')
@@ -24,14 +24,15 @@ function Events() {
     }, [])
 
     if (isLoading) {
+        console.log('loading events')
         return <div></div>
     }
 
     return (
         <div id='news-and-events-page'>
-            <h1>News & Events</h1>
+            <h1 className='page-heading'>News & Events</h1>
             <div id='event-grid'>
-                { createCards(events) }
+                { createCards(news) }
             </div>
         </div>
     )
