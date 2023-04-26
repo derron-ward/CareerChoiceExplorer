@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import Home from './pages/Home'
 import Questionnaire from './pages/Questionnaire'
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/profile' element={<Profile />} />
                 <Route path='/careers/:careerId' element={<Career />} />
             </Routes>
+            <Footer />
         </Router>
     </div>
   )
