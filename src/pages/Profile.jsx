@@ -39,15 +39,15 @@ function Profile() {
             <form action='#' method='POST' id='change-passwd'>
                 <div className='form-field'>
                     <label for="old-passwd">Old Password</label>
-                    <input type="text" />
+                    <input type="text" placeholder='Old Password'/>
                 </div>
                 <div className='form-field'>
                     <label for="new-passwd">New Password</label>
-                    <input type="text" />
+                    <input type="text" placeholder='New Password' />
                 </div>
                 <div className='form-field'>
                     <label for="new-passwd-confirm">Confirm New Password</label>
-                    <input type="text" />
+                    <input type="text" placeholder='Confirm New Password'/>
                 </div>
                 <button type='submit'>Submit</button>
             </form>
